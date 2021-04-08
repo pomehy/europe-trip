@@ -1,0 +1,22 @@
+.page-header {
+  background-color: $basic-white;
+}
+
+.page-header__wrapper {
+  @include container;
+}
+
+.page-header__phone {
+  font-size: 18px;
+  color: $basic-dark-deep;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $basic-accent;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

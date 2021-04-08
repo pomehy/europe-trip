@@ -1,0 +1,20 @@
+.countries__wrapper {
+  @include container;
+}
+
+.countries__title {
+  @include title-style;
+}
+
+.countries__description {
+  @include text-style;
+
+  color: transparentize($basic-dark, 0.3);
+}
+
+.countries__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}

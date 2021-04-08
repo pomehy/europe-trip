@@ -1,0 +1,19 @@
+.intro {
+  background-color: #7293bb;
+}
+
+.intro__wrapper {
+  @include container;
+}
+
+.intro__title {
+  @include title-style;
+
+  color: $basic-white;
+}
+
+.intro__text {
+  @include text-style;
+
+  color: $basic-white;
+}

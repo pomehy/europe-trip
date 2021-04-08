@@ -1,0 +1,15 @@
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-nav__link {
+  font-weight: 500;
+  font-size: 14px;
+  color: $basic-dark-deep;
+  text-decoration: none;
+
+  @include activity-link;
+}

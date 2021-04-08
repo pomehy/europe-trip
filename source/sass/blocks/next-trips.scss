@@ -1,0 +1,21 @@
+.next-trips__title {
+  @include footer-title;
+
+  color: $basic-dark-deep;
+}
+
+.next-trips__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.next-trips__link {
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: transparentize($basic-dark-deep, 0.5);
+
+  @include activity-link;
+}

@@ -1,0 +1,9 @@
+.tour-card__title {
+  @include title-style;
+}
+
+.tour-card__description {
+  @include text-style;
+
+  color: transparentize($basic-dark, 0.3);
+}

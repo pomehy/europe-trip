@@ -1,0 +1,31 @@
+.contacts__title {
+  @include footer-title;
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.contacts__link {
+  font-size: 14px;
+  line-height: 17px;
+  color: $basic-accent;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $basic-dark;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.contacts__link--phone {
+  font-size: 16px;
+  line-height: 32px;
+}

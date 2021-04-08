@@ -1,0 +1,36 @@
+.price__wrapper {
+  @include container;
+}
+
+.price__title {
+  @include title-style;
+
+  color: $basic-dark;
+}
+
+.price__description {
+  @include text-style;
+
+  color: transparentize($basic-dark, 0.3);
+}
+
+.price__call-to-action {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  color: $basic-dark-deep;
+}
+
+.price__phone {
+  font-size: 20px;
+  line-height: 32px;
+  color: $basic-black;
+  text-decoration: none;
+}
+
+.price__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}

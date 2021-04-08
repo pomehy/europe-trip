@@ -1,0 +1,17 @@
+.feedback__wrapper {
+  @include container;
+}
+
+.feedback__title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  color: $basic-dark-deep;
+  text-align: center;
+}
+
+.feedback__description {
+  line-height: 24px;
+  color: $basic-dark-deep;
+  text-align: center;
+}
