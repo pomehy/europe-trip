@@ -47,6 +47,10 @@
     font-size: 10px;
     line-height: 12px;
   }
+
+  @media (max-width: $mobile-width) {
+    max-width: 288px;
+  }
 }
 
 .button--full-width {

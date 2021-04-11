@@ -1,8 +1,20 @@
+.page-main__intro {
+  position: relative;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 82px;
+  }
+}
+
 .page-main__countries {
   padding-top: 200px;
 
   @media (max-width: $tablet-width) {
     padding-top: 80px;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
   }
 }
 
@@ -11,6 +23,9 @@
 
   @media (max-width: $tablet-width) {
     padding-top: 79px;
+  }
+  @media (max-width: $mobile-width) {
+    display: none;
   }
 }
 
@@ -22,6 +37,9 @@
     padding-top: 64px;
     padding-bottom: 124px;
   }
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }
 
 .page-main__feedback {
@@ -30,4 +48,11 @@
   @media (max-width: $tablet-width) {
     margin-bottom: 0;
   }
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.page-footer {
+  display: none;
 }
