@@ -1,7 +1,18 @@
 .button {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  position: relative;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 250px;
+
+  padding-top: 31px;
+  padding-right: 38px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 12px;
   line-height: 14px;
   font-weight: 700;
@@ -9,6 +20,7 @@
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-align: center;
 
   background-color: $basic-accent;
   border: none;
@@ -24,5 +36,52 @@
 
   &:active {
     color: transparentize($basic-white, 0.3);
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding-top: 19px;
+    padding-bottom: 19px;
+
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+.button--full-width {
+  padding-right: 5px;
+  padding-left: 5px;
+  max-width: 100%;
+}
+
+.button--decor-arrow {
+  justify-content: space-between;
+  &::before {
+    content: "";
+    position: absolute;
+
+    right: 40px;
+
+    width: 14px;
+    height: 14px;
+
+    background-image: url("../../img/decor/arrow-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.button--small {
+  padding-top: 18px;
+  padding-bottom: 17px;
+
+  max-width: 176px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 19px;
+    padding-bottom: 19px;
+    max-width: 250px;
   }
 }

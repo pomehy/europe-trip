@@ -1,7 +1,13 @@
+.author__photo {
+  display: block;
+  margin-right: 15px;
+}
+
 .author__name {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   color: $basic-dark;
+  letter-spacing: -0.03em;
 }

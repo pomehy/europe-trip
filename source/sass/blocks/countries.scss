@@ -1,20 +1,113 @@
 .countries__wrapper {
   @include container;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .countries__title {
   @include title-style;
+
+  letter-spacing: -0.02em;
+
+  &::before {
+    bottom: -33px;
+
+    width: 229px;
+    height: 4px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
+
+    text-align: center;
+    letter-spacing: normal;
+  }
 }
 
 .countries__description {
   @include text-style;
 
+  grid-column-start: 1;
+  grid-column-end: -1;
+  margin-top: 20px;
+
   color: transparentize($basic-dark, 0.3);
+  letter-spacing: -0.03em;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+  }
 }
 
 .countries__list {
-  margin: 0;
+  grid-column-start: 1;
+  grid-column-end: -1;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-top: 34px;
+  margin-bottom: 0;
   padding: 0;
 
   list-style: none;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 24px;
+  }
+}
+
+.countries__item {
+  margin-top: 4px;
+  margin-bottom: 97px;
+
+  max-width: 30%;
+  width: 100%;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 5%;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    margin-left: 5%;
+  }
+
+  &:nth-child(3n) {
+    margin-left: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-right: 15px;
+    padding-left: 15px;
+
+    margin-right: 0;
+    margin-bottom: 20px;
+
+    max-width: 100%;
+    width: auto;
+
+    margin-top: 0;
+
+    &:not(:nth-child(3n)) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+
+    &:nth-child(2n) {
+      margin-top: 0;
+    }
+  }
 }

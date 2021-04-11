@@ -1,3 +1,72 @@
+// .catalog {
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     z-index: -1;
+//     top: 134px;
+//     left: 0;
+//     right: 0;
+//     margin-left: auto;
+//     margin-right: auto;
+
+//     width: 1443px;
+//     height: 1089px;
+
+//     background-image: url("../../img/tours-bg.svg");
+//     background-repeat: no-repeat;
+//     // background-position-y: 134px;
+//     // background-position-x: 50%;
+//   }
+// }
+
 .catalog__wrapper {
   @include container;
+
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    position: relative;
+  }
+}
+
+.catalog__catalog-nav {
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    left: 37px;
+    z-index: 2;
+
+    max-width: 95%;
+
+    overflow-x: auto;
+  }
+}
+
+.catalog__list {
+  padding-top: 41px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 72px;
+  }
+}
+
+.catalog__item {
+  position: relative;
+
+  display: none;
+  grid-template-columns: 1fr 2fr;
+
+  padding-bottom: 16px;
+
+  @media (max-width: $tablet-width) {
+    position: static;
+    flex-direction: column;
+  }
+}
+
+.catalog__item--active {
+  display: grid;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+  }
 }

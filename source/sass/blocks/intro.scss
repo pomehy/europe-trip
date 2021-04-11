@@ -1,19 +1,76 @@
 .intro {
   background-color: #7293bb;
+
+  background-image: url("../../img/intro-bg-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .intro__wrapper {
   @include container;
+
+  display: grid;
+  grid-template-columns: 8fr 3fr 1fr;
+  min-height: 860px;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 2fr 7fr 2fr;
+    min-height: 344px;
+  }
+}
+
+.intro__content {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  align-self: center;
+  margin-bottom: 114px;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 23px;
+  }
 }
 
 .intro__title {
+  margin-top: 0;
+  margin-bottom: 28px;
+
   @include title-style;
 
   color: $basic-white;
+  letter-spacing: -1px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
+    text-align: center;
+    letter-spacing: normal;
+  }
 }
 
 .intro__text {
+  margin-bottom: 32px;
   @include text-style;
 
   color: $basic-white;
+  letter-spacing: -0.03em;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 15px;
+    margin-bottom: 7px;
+
+    text-align: center;
+  }
+}
+
+.intro__button {
+  max-width: 340px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 250px;
+  }
 }

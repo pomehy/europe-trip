@@ -1,9 +1,89 @@
+.tour-card__info {
+  padding-top: 54px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .tour-card__title {
   @include title-style;
+
+  margin-bottom: 54px;
+
+  letter-spacing: -0.02em;
+
+  &::before {
+    bottom: -22px;
+
+    width: 175px;
+    height: 3px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 5px;
+
+    letter-spacing: normal;
+  }
 }
 
 .tour-card__description {
   @include text-style;
 
   color: transparentize($basic-dark, 0.3);
+
+  letter-spacing: -0.03em;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+  }
+}
+
+.tour-card__review {
+  z-index: 1;
+  align-self: center;
+  justify-self: end;
+
+  margin-top: 55px;
+
+  width: 382px;
+  min-height: 285px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 110px;
+  }
+}
+
+.tour-card__image-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 40.2%;
+
+  @media (max-width: $tablet-width) {
+    left: 0;
+    bottom: 48px;
+
+    width: 100%;
+    max-height: 415px;
+
+    overflow: hidden;
+  }
+}
+
+.tour-card__image {
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.tour-card__button {
+  margin-top: 48px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 2px;
+  }
 }

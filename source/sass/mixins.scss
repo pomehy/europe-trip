@@ -3,6 +3,7 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+
   box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
@@ -21,16 +22,31 @@
 }
 
 @mixin title-style {
+  position: relative;
+
+  margin-top: 0;
   font-weight: 600;
   font-size: 55px;
   line-height: 80px;
 
-  @media (min-width: $tablet-width) {
-    font-size: 30px;
-    line-height: 45px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    background-color: $basic-accent;
   }
 
-  @media (min-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 45px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
     font-size: 24px;
     line-height: 36px;
   }
@@ -53,6 +69,8 @@
 }
 
 @mixin footer-title {
+  margin-top: 0;
+  margin-bottom: 21px;
   font-weight: 600;
   font-size: 18px;
   line-height: 32px;

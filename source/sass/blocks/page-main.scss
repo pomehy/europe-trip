@@ -1,0 +1,33 @@
+.page-main__countries {
+  padding-top: 200px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 80px;
+  }
+}
+
+.page-main__catalog {
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 79px;
+  }
+}
+
+.page-main__price {
+  padding-top: 240px;
+  padding-bottom: 138px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 64px;
+    padding-bottom: 124px;
+  }
+}
+
+.page-main__feedback {
+  margin-bottom: 69px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}

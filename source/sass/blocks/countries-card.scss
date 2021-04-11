@@ -1,11 +1,87 @@
 .countries-card__link {
+  position: relative;
+  display: block;
+
+  width: 100%;
+  max-height: 430px;
+
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    .countries-card__overlay {
+      display: flex;
+
+      transition: 0.2s ease-in;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    max-height: 425px;
+  }
 }
 
 .countries-card__name {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 17px;
+  padding-bottom: 17px;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  max-width: 215px;
+  width: 100%;
+
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
   color: $basic-dark;
   text-align: center;
+
+  background-color: $basic-white;
+}
+
+.countries-card__image {
+  @media (max-width: $tablet-width) {
+    max-width: 288px;
+  }
+}
+
+.countries-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  background-color: transparentize($basic-dark-deep, 0.4);
+}
+
+.countries-card__message {
+  padding-top: 30px;
+  padding-right: 24px;
+  padding-bottom: 30px;
+  padding-left: 24px;
+
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2px;
+  color: $basic-white;
+  text-transform: uppercase;
+
+  border: 1px solid $basic-white;
+
+  box-sizing: border-box;
 }
