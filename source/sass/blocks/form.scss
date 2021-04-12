@@ -1,7 +1,18 @@
+.form__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 42px;
+  text-align: center;
+}
+
 .form__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
 
   margin: 0;
   padding: 0;
@@ -15,14 +26,10 @@
   display: flex;
   width: 100%;
   max-width: 269px;
+  margin-bottom: 20px;
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 20px;
     max-width: 100%;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 }
 
@@ -76,6 +83,8 @@
 
   border: 1px solid transparentize($basic-dark, 0.7);
 
+  box-sizing: border-box;
+
   &::placeholder {
     font-size: 14px;
     color: $basic-dark-deep;
@@ -88,11 +97,7 @@
 }
 
 .form__button {
-  margin-top: 25px;
+  margin-top: 5px;
   margin-right: auto;
   margin-left: auto;
-
-  @media (max-width: $tablet-width) {
-    margin-top: 20px;
-  }
 }

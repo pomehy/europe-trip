@@ -74,13 +74,10 @@
 
     width: 100%;
     max-height: 415px;
-
-    overflow: hidden;
   }
 
   @media (max-width: $mobile-width) {
-    bottom: 83px;
-    width: 768px;
+    height: 415px;
   }
 }
 
@@ -88,7 +85,15 @@
   @media (max-width: $tablet-width) {
     width: 100%;
   }
+
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 }
+
 
 .tour-card__button {
   margin-top: 48px;

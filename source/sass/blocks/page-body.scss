@@ -13,3 +13,8 @@
 
   background-color: $basic-white;
 }
+
+.page-body--no-scroll {
+  overflow-y: hidden;
+  padding-right: 17px;
+}
