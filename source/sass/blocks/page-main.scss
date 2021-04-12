@@ -7,14 +7,17 @@
 }
 
 .page-main__countries {
-  padding-top: 200px;
+  margin-top: 150px;
+  padding-top: 50px;
 
   @media (max-width: $tablet-width) {
-    padding-top: 80px;
+    margin-top: 50px;
+    padding-top: 30px;
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 86px;
+    margin-top: 50px;
+    padding-top: 36px;
   }
 }
 
@@ -26,12 +29,13 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 6px;
+    padding-top: 41px;
   }
 }
 
 .page-main__price {
-  padding-top: 240px;
+  margin-top: 180px;
+  padding-top: 60px;
   padding-bottom: 138px;
 
   @media (max-width: $tablet-width) {

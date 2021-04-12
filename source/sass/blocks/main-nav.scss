@@ -6,6 +6,13 @@
   padding: 0;
 
   list-style: none;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    padding-top: 132px;
+
+    width: 100%;
+  }
 }
 
 .main-nav__item {
@@ -15,6 +22,16 @@
     margin-right: 0;
   }
 
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+    margin-bottom: 30px;
+
+    background-color: $basic-grey-light;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .main-nav__link {
@@ -30,4 +47,12 @@
   box-sizing: border-box;
 
   @include activity-link;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 16px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+  }
 }

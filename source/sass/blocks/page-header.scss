@@ -2,6 +2,24 @@
   background-color: $basic-white;
 }
 
+.page-header--active {
+  @media (max-width: $tablet-width) {
+    .page-header__main-nav {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+
+      display: flex;
+      max-width: 100%;
+      width: 100%;
+      min-height: 41vh;
+
+      background-color: $basic-white;
+    }
+  }
+}
+
 .page-header__wrapper {
   @include container;
 
@@ -57,6 +75,7 @@
   top: 0;
   right: 0;
   padding: 0;
+  z-index: 15;
 
   display: none;
 
@@ -79,4 +98,9 @@
   @media (max-width: $mobile-width) {
     width: 50px;
   }
+}
+
+.page-header__toggle--active {
+  background-color: $basic-white;
+  background-image: url("../../img/decor/cross-menu-icon.svg");
 }
