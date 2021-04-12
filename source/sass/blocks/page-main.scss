@@ -14,7 +14,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    display: none;
+    padding-top: 86px;
   }
 }
 
@@ -24,8 +24,9 @@
   @media (max-width: $tablet-width) {
     padding-top: 79px;
   }
+
   @media (max-width: $mobile-width) {
-    display: none;
+    padding-top: 6px;
   }
 }
 
@@ -37,8 +38,10 @@
     padding-top: 64px;
     padding-bottom: 124px;
   }
+
   @media (max-width: $mobile-width) {
-    display: none;
+    padding-top: 29px;
+    padding-bottom: 34px;
   }
 }
 
@@ -48,11 +51,12 @@
   @media (max-width: $tablet-width) {
     margin-bottom: 0;
   }
-  @media (max-width: $mobile-width) {
-    display: none;
-  }
+
+  // @media (max-width: $mobile-width) {
+  //   display: none;
+  // }
 }
 
-.page-footer {
-  display: none;
-}
+// .page-footer {
+//   display: none;
+// }

@@ -56,6 +56,13 @@
 
     min-height: 629px;
   }
+
+  @media (max-width: $mobile-width) {
+    min-height: auto;
+
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 .price-card__header {
@@ -140,6 +147,10 @@
     &::before {
       top: 8px;
     }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 48px;
   }
 }
 

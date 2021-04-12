@@ -56,6 +56,11 @@
   @media (max-width: $tablet-width) {
     margin-top: 110px;
   }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 101px;
+    width: 268px;
+  }
 }
 
 .tour-card__image-wrapper {
@@ -71,6 +76,11 @@
     max-height: 415px;
 
     overflow: hidden;
+  }
+
+  @media (max-width: $mobile-width) {
+    bottom: 83px;
+    width: 768px;
   }
 }
 

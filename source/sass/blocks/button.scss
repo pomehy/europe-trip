@@ -88,4 +88,8 @@
     padding-bottom: 19px;
     max-width: 250px;
   }
+
+  @media (max-width: $mobile-width) {
+    max-width: 288px;
+  }
 }

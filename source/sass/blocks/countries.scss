@@ -63,6 +63,10 @@
   @media (max-width: $tablet-width) {
     margin-top: 24px;
   }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 3px;
+  }
 }
 
 .countries__item {
@@ -107,6 +111,15 @@
     }
 
     &:nth-child(2n) {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 35px;
+    padding: 0;
+
+    &:last-child {
       margin-top: 0;
     }
   }
