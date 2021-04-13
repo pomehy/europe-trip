@@ -28,7 +28,6 @@
     .price-card__title,
     .price-card__value {
       color: $basic-accent;
-      // line-height: 34px;
       letter-spacing: 0;
     }
 
@@ -40,7 +39,7 @@
 
     .price-card__item {
       &::before {
-        background-image: url("../../img/decor/check-mark-icon-dark.svg");
+        background-image: url(".././img/decor/check-mark-icon-dark.svg");
       }
     }
   }
@@ -173,7 +172,7 @@
     width: 22px;
     height: 22px;
 
-    background-image: url("../../img/decor/check-mark-icon-accent.svg");
+    background-image: url(".././img/decor/check-mark-icon-accent.svg");
     background-position: center;
     background-repeat: no-repeat;
   }

@@ -8,7 +8,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 56px;
+    padding-top: 67px;
   }
 }
 
@@ -119,7 +119,11 @@
     }
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     padding-top: 44px;
+
+    &::before {
+      top: 13px;
+    }
   }
 }

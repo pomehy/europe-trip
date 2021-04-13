@@ -1,10 +1,22 @@
 .intro {
   background-color: #7293bb;
 
-  background-image: url("../../img/intro-bg-desktop.jpg");
+  background-image: url(".././img/intro-bg-desktop.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url(".././img/intro-bg-desktop@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url(".././img/intro-bg-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(".././img/intro-bg-tablet@2x.jpg");
+    }
+  }
 
   @media (max-width: $mobile-width) {
     background-color: transparent;
@@ -17,7 +29,7 @@
       z-index: -1;
 
       width: 100%;
-      height: 51.6%;
+      height: 235px;
 
       background-image: url("../../img/intro-bg-desktop.jpg");
       background-position: center;
@@ -58,7 +70,7 @@
     justify-content: center;
     align-items: center;
 
-    margin-bottom: 23px;
+    margin-bottom: 0;
   }
 }
 

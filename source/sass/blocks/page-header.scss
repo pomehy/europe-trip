@@ -13,9 +13,46 @@
       display: flex;
       max-width: 100%;
       width: 100%;
-      min-height: 41vh;
+      min-height: 405px;
 
       background-color: $basic-white;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    .page-header__main-nav {
+      min-height: 568px;
+    }
+  }
+}
+
+.page-header--nojs {
+  @media (max-width: $tablet-width) {
+    .page-header__logo {
+      z-index: 11;
+    }
+
+    .page-header__contacts {
+      z-index: 11;
+      display: block;
+      margin-left: 0;
+      padding-right: 0;
+      max-width: 100%;
+    }
+
+    .page-header__toggle {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    .page-header__logo {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .page-header__contacts {
+      display: none;
     }
   }
 }

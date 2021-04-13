@@ -6,9 +6,14 @@
 
   min-height: 455px;
   background-color: $basic-accent;
-  background-image: url("../../img/feedback-bg-desktop.jpg"), linear-gradient(90deg, $basic-accent 0%, $basic-accent 70%, $basic-white 70%, $basic-white 100%);
+  background-image: url(".././img/feedback-bg-desktop.jpg"), linear-gradient(90deg, $basic-accent 0%, $basic-accent 70%, $basic-white 70%, $basic-white 100%);
   background-repeat: no-repeat;
   background-position-x: left;
+  background-size: contain;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url(".././img/feedback-bg-desktop@2x.jpg"), linear-gradient(90deg, $basic-accent 0%, $basic-accent 70%, $basic-white 70%, $basic-white 100%);
+  }
 
   @media (max-width: $tablet-width) {
     justify-content: center;
@@ -17,6 +22,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    min-height: 441px;
     background-color: $basic-grey-light;
     background-image: none;
   }
@@ -27,7 +33,10 @@
   flex-direction: column;
 
   margin-bottom: 4px;
-  padding: 50px;
+  padding-top: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
 
   max-width: 656px;
 
@@ -38,7 +47,8 @@
   box-sizing: border-box;
 
   @media (max-width: $mobile-width) {
-    padding-top: 39px;
+    margin-bottom: 0;
+    padding-top: 43px;
     padding-right: 0;
     padding-left: 0;
     background-color: transparent;

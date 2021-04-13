@@ -104,6 +104,8 @@
   color: $basic-black;
   text-decoration: none;
 
+  white-space: nowrap;
+
   @include activity-link;
 
   stroke: $basic-accent;
