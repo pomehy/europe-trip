@@ -17,4 +17,8 @@
 .page-body--no-scroll {
   overflow-y: hidden;
   padding-right: 17px;
+
+  @media (max-width: $mobile-width) {
+    padding-right: 0;
+  }
 }
