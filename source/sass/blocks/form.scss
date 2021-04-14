@@ -1,0 +1,131 @@
+.form__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.form__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+
+  list-style: none;
+}
+
+.form__field {
+  position: relative;
+
+  display: flex;
+  width: 100%;
+  max-width: 269px;
+  margin-bottom: 20px;
+
+  @media (max-width: $mobile-width) {
+    max-width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form__label {
+  position: relative;
+}
+
+.form__label--required {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 13px;
+
+    width: 8px;
+    height: 8px;
+
+    background-image: url("../../img/decor/asterisk-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.form__label--phone {
+  &::after {
+    content: "+7";
+    position: absolute;
+    top: 17px;
+    left: 25px;
+
+    font-size: 14px;
+  }
+
+  + .form__input {
+    padding-left: 49px;
+  }
+}
+
+.form__input {
+  padding-top: 17px;
+  padding-right: 15px;
+  padding-bottom: 14px;
+  padding-left: 15px;
+
+  width: 100%;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  color: $basic-dark-deep;
+
+  border: 1px solid transparentize($basic-dark, 0.7);
+
+  box-sizing: border-box;
+
+  &::placeholder {
+    font-size: 14px;
+    color: $basic-dark-deep;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid transparentize($basic-dark, 0.15);
+  }
+}
+
+.form__input--error {
+  + .form__error {
+    display: block;
+  }
+}
+
+.form__error {
+  position: absolute;
+  top: -17px;
+
+  display: none;
+
+  font-size: 12px;
+  line-height: 15px;
+
+  color: $basic-accent;
+}
+
+.form__button {
+  margin-top: 5px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 20px;
+  }
+}

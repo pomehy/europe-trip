@@ -1,0 +1,78 @@
+.next-trips__title {
+  @include footer-title;
+
+  color: $basic-dark-deep;
+
+  @media (max-width: $mobile-width) {
+    padding-right: 11px;
+    text-align: center;
+  }
+}
+
+.next-trips__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 40px;
+
+  @media (max-width: $tablet-width) {
+    padding-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+
+.next-trips__list {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (max-width: $tablet-width) {
+    max-width: 33%;
+    width: 100%;
+
+    margin-right: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: none;
+    width: auto;
+
+    margin-right: 0;
+    margin-bottom: 21px;
+
+    padding-right: 15px;
+  }
+}
+
+.next-trips__item {
+  display: flex;
+  margin-bottom: 10px;
+
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    justify-content: center;
+  }
+}
+
+.next-trips__link {
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: transparentize($basic-dark-deep, 0.5);
+
+  @include activity-link;
+}

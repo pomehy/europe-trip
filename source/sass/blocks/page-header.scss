@@ -1,0 +1,143 @@
+.page-header {
+  background-color: $basic-white;
+}
+
+.page-header--active {
+  @media (max-width: $tablet-width) {
+    .page-header__main-nav {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+
+      display: flex;
+      max-width: 100%;
+      width: 100%;
+      min-height: 405px;
+
+      background-color: $basic-white;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    .page-header__main-nav {
+      min-height: 568px;
+    }
+  }
+}
+
+.page-header--nojs {
+  @media (max-width: $tablet-width) {
+    .page-header__logo {
+      z-index: 11;
+    }
+
+    .page-header__contacts {
+      z-index: 11;
+      display: block;
+      margin-left: 0;
+      padding-right: 0;
+      max-width: 100%;
+    }
+
+    .page-header__toggle {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    .page-header__logo {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .page-header__contacts {
+      display: none;
+    }
+  }
+}
+
+.page-header__wrapper {
+  @include container;
+
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 99px;
+
+  padding-top: 13px;
+  padding-bottom: 10px;
+
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    min-height: 50px;
+  }
+}
+
+.page-header__logo {
+  display: flex;
+  margin-right: 20px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 44px;
+  }
+}
+
+.page-header__main-nav {
+  margin-left: auto;
+  max-width: 60%;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__contacts {
+  margin-left: 54px;
+  padding-right: 14px;
+
+  max-width: 25%;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  z-index: 15;
+
+  display: none;
+
+  width: 72px;
+  height: 50px;
+
+  background-color: $basic-accent;
+  background-image: url(".././img/decor/burger-menu-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border: none;
+
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 50px;
+  }
+}
+
+.page-header__toggle--active {
+  background-color: $basic-white;
+  background-image: url(".././img/decor/cross-menu-icon.svg");
+}

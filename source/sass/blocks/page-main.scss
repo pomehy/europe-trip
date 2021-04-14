@@ -1,0 +1,59 @@
+.page-main__intro {
+  position: relative;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 82px;
+  }
+}
+
+.page-main__countries {
+  margin-top: 150px;
+  padding-top: 50px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 50px;
+    padding-top: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 73px;
+    padding-top: 36px;
+  }
+}
+
+.page-main__catalog {
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 79px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 41px;
+  }
+}
+
+.page-main__price {
+  margin-top: 180px;
+  padding-top: 60px;
+  padding-bottom: 138px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+    padding-top: 88px;
+    padding-bottom: 125px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 31px;
+    padding-bottom: 37px;
+  }
+}
+
+.page-main__feedback {
+  margin-bottom: 69px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}

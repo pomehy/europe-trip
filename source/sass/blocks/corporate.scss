@@ -1,0 +1,17 @@
+.corporate__title {
+  @include footer-title;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+  }
+}
+
+.corporate__description {
+  font-size: 14px;
+  line-height: 24px;
+  color: transparentize($basic-dark-deep, 0.5);
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+  }
+}
