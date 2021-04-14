@@ -1,27 +1,21 @@
 const pageHeaderToggle = document.querySelector('.page-header__toggle');
 const pageHeader = document.querySelector('.page-header');
 const catalog = document.querySelector('.catalog');
-
 const pageBody = document.querySelector('.page-body');
 const buyTourButtons = document.querySelectorAll('.button[data-modal="buy-tour"]');
-
 const modals = document.querySelectorAll('.modal');
 const modalBuyTour = document.querySelector('.modal--buy-tour');
 const modalSuccess = document.querySelector('.modal--success');
 const phoneBuyTour = modalBuyTour.querySelector('input[name="phone"]');
 const emailBuyTour = modalBuyTour.querySelector('input[name="email"]');
-
 const forms = document.querySelectorAll('form');
 const inputForms = document.querySelectorAll('input');
-
-const PHONE_LENGTH = 10;
-
 const catalogNav = document.querySelector('.catalog-nav');
 const catalogNavItems = document.querySelectorAll('.catalog-nav__link');
 const catalogCards = document.querySelectorAll('.catalog__item');
-
 const countriesList = document.querySelector('.countries__list');
 const countriesCardLinks = document.querySelectorAll('.countries-card__link')
+const PHONE_LENGTH = 10;
 
 pageHeaderToggle.addEventListener('click', (evt) => {
   evt.preventDefault();
@@ -33,11 +27,34 @@ pageHeader.classList.remove('page-header--nojs');
 pageHeader.classList.remove('page-header--active');
 catalog.classList.remove('catalog--nojs');
 
+
+let isStorageSupport = true;
+let storagePhone = '';
+let storageEmail = '';
+
+try {
+  storagePhone = localStorage.getItem('phone');
+  storageEmail = localStorage.getItem('email');
+} catch (err) {
+  isStorageSupport = false;
+}
+
+const addLocalStorage = () => {
+  if (isStorageSupport) {
+    for (let i = 0; i < inputForms.length; i++) {
+      if (inputForms[i].type === 'tel' || inputForms[i].type === 'email') {
+        let storageKey = inputForms[i].name;
+        localStorage.setItem(storageKey, inputForms[i].value);
+      }
+    }
+  }
+}
+
 for (let i = 0; i < buyTourButtons.length; i++) {
   buyTourButtons[i].addEventListener('click', (evt) => {
     evt.preventDefault();
     modalBuyTour.classList.add('modal--show');
-    pageBody.classList.add('page-body--no-scroll')
+    pageBody.classList.add('page-body--no-scroll');
     phoneBuyTour.focus();
 
     if (storagePhone || storageEmail) {
@@ -72,9 +89,8 @@ for (let i = 0; i < modals.length; i++) {
 const showModalSuccess = () => {
   modalBuyTour.classList.remove('modal--show');
   modalSuccess.classList.add('modal--show');
-  pageBody.classList.add('page-body--no-scroll')
+  pageBody.classList.add('page-body--no-scroll');
 }
-
 
 const isCyrillic = (text) => {
   return /[а-я]/i.test(text);
@@ -91,7 +107,7 @@ const CustomValidation = (input) => {
   }
 
   if (input.type === 'tel') {
-    input.setAttribute('minlenght', PHONE_LENGTH)
+    input.setAttribute('minlenght', PHONE_LENGTH);
 
     if (isNaN(inputValue)) {
       input.setCustomValidity('Укажите телефон в формате +7 XXX XXX XX XX');
@@ -122,29 +138,6 @@ for (let i = 0; i < inputForms.length; i++) {
   })
 }
 
-let isStorageSupport = true;
-let storagePhone = '';
-let storageEmail = '';
-
-try {
-  storagePhone = localStorage.getItem('phone');
-  storageEmail = localStorage.getItem('email');
-} catch (err) {
-  isStorageSupport = false;
-}
-
-const addLocalStorage = () => {
-  if (isStorageSupport) {
-    for (let i = 0; i < inputForms.length; i++) {
-      if (inputForms[i].type === 'tel' || inputForms[i].type === 'email') {
-        let storageKey = inputForms[i].name;
-        localStorage.setItem(storageKey, inputForms[i].value);
-      }
-    }
-  }
-}
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
   const ajaxSend = async (formData) => {
@@ -169,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
           showModalSuccess();
           addLocalStorage();
           console.log(response);
-          form.reset(); // очищаем поля формы
+          form.reset();
         })
         .catch((err) => {
           console.error(err);
