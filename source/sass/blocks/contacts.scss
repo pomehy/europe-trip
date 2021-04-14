@@ -58,15 +58,26 @@
   }
 }
 
+.contacts__icon {
+  margin-right: 9px;
+}
+
 .contacts__link--phone {
   font-size: 16px;
   line-height: 32px;
+  stroke: #d7d9df;
+  stroke-width: 2;
+}
+
+.contacts__icon--mail {
+  margin-right: 15px;
+  fill: #d7d9df;
 }
 
 .contacts__link--dark {
   color: $basic-dark-deep;
   text-decoration: none;
-  stroke: $basic-dark;
+  stroke: $basic-dark-deep;
 
   &:hover,
   &:focus {
@@ -77,14 +88,6 @@
   &:active {
     opacity: 0.7;
   }
-}
-
-.contacts__icon {
-  margin-right: 9px;
-}
-
-.contacts__icon--mail {
-  margin-right: 15px;
 }
 
 .contacts__name--tablet {

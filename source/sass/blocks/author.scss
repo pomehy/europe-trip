@@ -2,6 +2,8 @@
   display: block;
   margin-right: 15px;
 
+  border-radius: 50%;
+
   @media (max-width: $mobile-width) {
     margin-right: 0;
   }

@@ -32,7 +32,6 @@
 
   @media (max-width: $mobile-width) {
     max-width: 100%;
-
   }
 }
 
@@ -121,6 +120,7 @@
 
   @media (max-width: $mobile-width) {
     padding-top: 44px;
+    padding-bottom: 14px;
 
     &::before {
       top: 13px;

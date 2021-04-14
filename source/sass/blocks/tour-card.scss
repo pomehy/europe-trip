@@ -34,11 +34,14 @@
 .tour-card__description {
   @include text-style;
 
+  padding-right: 11px;
+
   color: transparentize($basic-dark, 0.3);
 
   letter-spacing: -0.03em;
 
   @media (max-width: $tablet-width) {
+    padding-right: 0;
     text-align: center;
   }
 }
@@ -97,7 +100,6 @@
     height: 100%;
   }
 }
-
 
 .tour-card__button {
   margin-top: 48px;

@@ -120,7 +120,7 @@
   height: 50px;
 
   background-color: $basic-accent;
-  background-image: url("../../img/decor/burger-menu-icon.svg");
+  background-image: url(".././img/decor/burger-menu-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 
@@ -139,5 +139,5 @@
 
 .page-header__toggle--active {
   background-color: $basic-white;
-  background-image: url("../../img/decor/cross-menu-icon.svg");
+  background-image: url(".././img/decor/cross-menu-icon.svg");
 }
